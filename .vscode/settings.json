@@ -1,0 +1,6 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "git.inputValidationSubjectLength": 72,
+  "editor.rulers": [80]
+}

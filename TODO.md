@@ -1,0 +1,3 @@
+- todo selectors
+- add craco and linaria
+- create todo ui

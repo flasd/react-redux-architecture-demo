@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Provider as ReduxStoreProvider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import { Provider as ReduxActionsProvider } from './services/action-creator-registry';
+import registry from './store/actionCreators';
+import store, { history } from './store';
+import Screens from './screens';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ReduxActionsProvider registry={registry}>
+      <ReduxStoreProvider store={store}>
+        <ConnectedRouter history={history}>
+          <Screens />
+        </ConnectedRouter>
+      </ReduxStoreProvider>
+    </ReduxActionsProvider>
   );
 }
 
