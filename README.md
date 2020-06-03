@@ -22,7 +22,7 @@ src/
 			aModule/
 				index.ts // reducer, action creators
 				selectors.ts // selectors
-				someSaga.ts // sagas
+				someEffect.ts // sagas
 ```
 
 ## Naming Patterns
